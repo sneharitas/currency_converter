@@ -5,35 +5,32 @@ This program asks the user to enter a currency type and an amount.
 It checks if the amount entered is a valid number.
 Then it displays the currency and amount entered by the user.
 """
+for i in range(4):  #task-3 as loop is said to be applied in the  same process as the task 1 and 2 
 
-# Ask the user to enter the currency type
-currency = input("Enter currency (USD or EUR): ")
+    # Ask the user to enter the currency type
+    currency = input("Enter currency (USD or EUR or JPY or GBP): ")
 
-# Ask the user to enter the amount
-amount = input("Enter amount: ")
-
-"""
-Check if the amount entered by the user is a number.
-If it is a number, convert it into float and print the result.
-If it is not a number, show an error message.
-"""
-
-if amount.isdigit():
-    amount = float(amount)
-
+    # Ask the user to enter the amount
+    amount = float(input("Enter amount: "))
     print("Currency entered:", currency)
     print("Amount entered:", amount)
 
-else:
-    print("Invalid amount. Please enter a number.")
-# ---------------- Task 2: Conversion ----------------
-if currency == "USD":
-    converted_amount = amount * 132
-elif currency == "EUR":
-    converted_amount = amount * 145
-else:
-    print("Unsupported currency. Conversion not possible.")
-    exit()  # stop the program if invalid currency
 
-# Print converted amount
-print("Converted amount in NPR:", converted_amount)
+
+    # ---------------- Task 2: Conversion ----------------
+    if currency == "USD":
+        converted_amount = amount * 132
+    elif currency == "EUR":
+        converted_amount = amount * 145
+    elif currency == "JPY" :
+        converted_amount = amount * 9.4
+    elif currency == "GBP":
+        converted_amount = amount * 198
+    else:
+        print("Unsupported currency. Conversion not possible.")
+        exit()  # stop the program if invalid currency
+
+    # Print converted amount
+    print("Converted amount in NPR:", converted_amount)
+
+

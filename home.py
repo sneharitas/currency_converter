@@ -26,3 +26,14 @@ if amount.isdigit():
 
 else:
     print("Invalid amount. Please enter a number.")
+# ---------------- Task 2: Conversion ----------------
+if currency == "USD":
+    converted_amount = amount * 132
+elif currency == "EUR":
+    converted_amount = amount * 145
+else:
+    print("Unsupported currency. Conversion not possible.")
+    exit()  # stop the program if invalid currency
+
+# Print converted amount
+print("Converted amount in NPR:", converted_amount)

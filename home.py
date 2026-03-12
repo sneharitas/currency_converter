@@ -5,6 +5,8 @@ This program asks the user to enter a currency type and an amount.
 It checks if the amount entered is a valid number.
 Then it displays the currency and amount entered by the user.
 """
+transactions = []
+
 for i in range(4):  #task-3 as loop is said to be applied in the  same process as the task 1 and 2 
 
     # Ask the user to enter the currency type
@@ -32,5 +34,15 @@ for i in range(4):  #task-3 as loop is said to be applied in the  same process a
 
     # Print converted amount
     print("Converted amount in NPR:", converted_amount)
+
+    #----------------Task 4:Output Formatting-----------
+
+    transactions.append((currency, amount, converted_amount))
+
+    print("\n======== Conversion History Report ========")
+
+    for i, transaction in enumerate(transactions, start=1):
+        currency, amount, converted_amount = transaction
+        print(f"Transaction {i}: {currency} {amount} -> NPR {converted_amount}") 
 
 
